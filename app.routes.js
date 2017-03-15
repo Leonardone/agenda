@@ -14,6 +14,16 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
                 return AgendaSrv.getAppuntamenti()
             }
         }
+    })
+    .state('/dettaglio',{
+       url:'/dettaglio/:titolo', 
+       templateUrl:'agenda/dettaglio.template.html',
+       controller:'DettaglioCtrl',
+    //    resolve:{
+    //        appuntamento: function(AgendaSrv){
+    //            return AgendaSrv.getAppuntamento(titolo);
+    //        }
+       
     });
 
-})
+});

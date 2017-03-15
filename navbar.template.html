@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search" ng-model="$parent.ricerca">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <div class="form-group">
+    <select class="form-control" ng-init="$parent.colore='tutte'" ng-model="$parent.colore">
+      <option value="tutte" >Tutte</option>
+      <option value="#ff0000" >Alto</option>
+      <option value="#ffa500" >Medio</option>
+      <option value="#00ff00" >Basso</option>
+    </select>
+     </div>
+</form>
+</nav>
