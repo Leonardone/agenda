@@ -2,12 +2,38 @@
     <img id="loading" src="https://s-media-cache-ak0.pinimg.com/originals/2d/d1/00/2dd1009e7b7ec3b50d7768facf3543f5.gif">
 </div>
 <div ng-hide="loading" class="container" ng-class="{'alta':appuntamento.priorita=='alta', 'media':appuntamento.priorita=='media', 'bassa':appuntamento.priorita=='bassa'}">
-    <p>{{appuntamento.titolo}}</p>
-    <p>{{appuntamento.descrizione}}</p>
-    <p>{{appuntamento.data | date:'dd/MM/yyyy HH:mm:ss'}}</p>
-    <p>{{appuntamento.luogo}}</p>
-    <p><img ng-src="{{appuntamento.image}}"></p>
+   <form ng-submit="modifica()" novalidate>
 
+  <div class="form-group">
+    <label for="titolo">Titolo</label>
+    <input type="text" class="form-control" id="titolo" ng-model="appuntamento.titolo">
+  </div>
+  <div class="form-group">
+    <label for="data">Data</label>
+    <input type="datetime-local" class="form-control" id="data" ng-model="appuntamento.data">
+  </div>
+  <div class="form-group">
+    <label for="descrizione">Descrizione</label>
+    <input type="text" class="form-control" id="descrizione" ng-model="appuntamento.descrizione">
+  </div>
+  <div class="form-group">
+    <label for="luogo">Luogo</label>
+    <input type="text" class="form-control" id="luogo" ng-model="appuntamento.luogo">
+  </div>
+  <div class="form-group">
+      <label for="priorita"></label>
+     <select class="form-control" ng-model="appuntamento.priorita">
+      <option value="tutte" >Tutte</option>
+      <option value="alta" >Alto</option>
+      <option value="media" >Medio</option>
+      <option value="bassa" >Basso</option>
+    </select>
+  </div>
+   <p><img id="imm" ng-src="{{appuntamento.image}}"></p>
+<button type="submit" class="btn btn-danger">Salva</button>
+</form>
+
+   
 
 
 </div>
