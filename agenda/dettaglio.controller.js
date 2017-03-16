@@ -1,4 +1,4 @@
-angular.module('app').controller('DettaglioCtrl', function($scope, AgendaSrv, $stateParams, $timeout){
+angular.module('app').controller('DettaglioCtrl', function($scope, AgendaSrv, $stateParams, $timeout, $state){
 
     $scope.loading=true;
     // $scope.appuntamento= appuntamento;
@@ -9,6 +9,12 @@ angular.module('app').controller('DettaglioCtrl', function($scope, AgendaSrv, $s
    
 
    $scope.modifica=function(){
-       console.log($scope.appuntamento);
+       AgendaSrv.updateAppuntamento($scope.appuntamento);
+       $state.go('/');
+
+   }
+
+   $scope.back=function(){
+    $state.go('/');
    }
 })

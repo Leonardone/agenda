@@ -56,9 +56,18 @@ angular.module('app').service('AgendaSrv', function(){
         })
     }
 
+    var updateAppuntamento= function(app){
+        var updateoggetto=angular.copy(app);
+        var indice= appuntamenti.findIndex(function(el){
+            return el.id==app.id
+        })
+        appuntamenti.splice(indice, 1, updateoggetto);
+    }
+
     return{
         getAppuntamenti:getAppuntamenti,
         deleteAppuntamenti:deleteAppuntamenti,
-        getAppuntamento:getAppuntamento
+        getAppuntamento:getAppuntamento,
+        updateAppuntamento: updateAppuntamento
     }
 })
