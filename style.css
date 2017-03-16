@@ -1,0 +1,18 @@
+.alta,.media,.bassa{
+    border-radius:15px;
+}
+.alta{
+    background-color: #fbe9e7;
+    border:2px solid red;
+}
+
+.media{
+    background-color: #fff3e0;
+        border:2px solid orange;
+}
+
+.bassa{
+    background-color:palegreen;
+        border:2px solid green;
+}
+

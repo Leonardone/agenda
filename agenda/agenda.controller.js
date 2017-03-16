@@ -7,10 +7,6 @@ angular.module('app').controller('AgendaCtrl', function($scope, appuntamenti, Ag
     }
 
  
-    
-    $scope.$watch('colore', function(colore){
-        console.log(colore);
 
-    })
 
 });

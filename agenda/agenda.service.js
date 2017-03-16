@@ -7,7 +7,7 @@ angular.module('app').service('AgendaSrv', function(){
         data: new Date(),
         descrizione:'Non mi presenterò',
         luogo:'Piazza Gubassi',
-        priorita:'#ffa500',
+        priorita:'media',
         image:'https://dailybestecn.nohup.it/wp-content/uploads/2016/03/qXvUbj6.gif'
     },{
         id:2,
@@ -15,7 +15,7 @@ angular.module('app').service('AgendaSrv', function(){
         data: new Date(),
         descrizione:'Fuscaldone',
         luogo:'Gubassi str',
-        priorita:'#ff0000',
+        priorita:'alta',
         image:'https://media.giphy.com/media/4pMX5rJ4PYAEM/giphy.gif'
 
 
@@ -25,7 +25,7 @@ angular.module('app').service('AgendaSrv', function(){
         data: new Date(),
         descrizione:'baldo',
         luogo:'via Baldo degli ubaldi',
-        priorita:'#00ff00',
+        priorita:'bassa',
         image:'http://vignette1.wikia.nocookie.net/simpsons/images/b/bb/Best-simpsons-gifs-homers-brain.gif/revision/latest?cb=20130920112513' 
     },{
         id:4,
@@ -33,7 +33,7 @@ angular.module('app').service('AgendaSrv', function(){
         data: new Date(),
         descrizione:'pussavia',
         luogo:'via da qui',
-        priorita:'#00ff00',
+        priorita:'bassa',
         image:'https://media.giphy.com/media/fDO2Nk0ImzvvW/giphy.gif'
     },{
         id:5,
@@ -41,7 +41,7 @@ angular.module('app').service('AgendaSrv', function(){
         data: new Date(),
         descrizione:'Suicidio',
         luogo:'via del super TU, snc',
-        priorita:'#ff0000',
+        priorita:'alta',
         image:'http://31.media.tumblr.com/265f4f5895f24c795fed2b8efd033a20/tumblr_n2tlg0mrMK1su6ajeo1_500.gif' 
     }];
     var getAppuntamenti=function(){
