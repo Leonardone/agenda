@@ -67,9 +67,11 @@ angular.module('app').service('AgendaSrv', function(){
     var saveAppuntamento=function(app){
         var nuovoappuntamento=angular.copy(app);
         var arrayId=[];
-        appuntamenti.forEach(function(el){
-            arrayId.push(el.id);
-        });
+        for(a of appuntamenti)
+            arrayId.push(a.id);
+        // appuntamenti.forEach(function(el){
+        //     arrayId.push(el.id);
+        // });
         var id = Math.max(...arrayId);
         nuovoappuntamento.id=id+1;
         appuntamenti.push(nuovoappuntamento);
