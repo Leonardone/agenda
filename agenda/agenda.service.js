@@ -64,10 +64,22 @@ angular.module('app').service('AgendaSrv', function(){
         appuntamenti.splice(indice, 1, updateoggetto);
     }
 
+    var saveAppuntamento=function(app){
+        var nuovoappuntamento=angular.copy(app);
+        var arrayId=[];
+        appuntamenti.forEach(function(el){
+            arrayId.push(el.id);
+        });
+        var id = Math.max(...arrayId);
+        nuovoappuntamento.id=id+1;
+        appuntamenti.push(nuovoappuntamento);
+    }
+
     return{
         getAppuntamenti:getAppuntamenti,
         deleteAppuntamenti:deleteAppuntamenti,
         getAppuntamento:getAppuntamento,
-        updateAppuntamento: updateAppuntamento
+        updateAppuntamento: updateAppuntamento,
+        saveAppuntamento:saveAppuntamento
     }
 })

@@ -17,4 +17,6 @@ angular.module('app').controller('DettaglioCtrl', function($scope, AgendaSrv, $s
    $scope.back=function(){
     $state.go('/');
    }
+
+
 })

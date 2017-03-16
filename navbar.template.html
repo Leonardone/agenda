@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default nnav">
 <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search" ng-model="$parent.ricerca">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+ 
   <div class="form-group">
     <select class="form-control" ng-init="$parent.colore='tutte'" ng-model="$parent.colore">
       <option value="tutte" >Tutte</option>
@@ -12,5 +12,6 @@
       <option value="bassa" >Basso</option>
     </select>
      </div>
+      <button type="submit" class="btn btn-default" ui-sref-active="active" ui-sref="crea">Crea</button>
 </form>
 </nav>

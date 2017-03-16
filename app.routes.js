@@ -34,6 +34,10 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
             console.log('sono uscito');
         }
        
+    }).state('crea', {
+        url: '/crea',
+        templateUrl: 'agenda/nuova.template.html',
+        controller: 'NuovaCtrl'
     });
 
 });

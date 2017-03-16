@@ -1,0 +1,42 @@
+<div class="container" ng-class="{'alta':appuntamento.priorita=='alta', 'media':appuntamento.priorita=='media', 'bassa':appuntamento.priorita=='bassa'}">
+    </br>
+    </br>
+   <button class="btn btn-warning" ng-click="back()">Back</button>
+   <form ng-submit="crea()" novalidate>
+
+  <div class="form-group">
+    <label for="titolo">Titolo</label>
+    <input type="text" class="form-control" id="titolo" ng-model="appuntamento.titolo">
+  </div>
+  <div class="form-group">
+    <label for="data">Data</label>
+    <input type="datetime-local" class="form-control" id="data" ng-model="appuntamento.data">
+  </div>
+  <div class="form-group">
+    <label for="descrizione">Descrizione</label>
+    <input type="text" class="form-control" id="descrizione" ng-model="appuntamento.descrizione">
+  </div>
+  <div class="form-group">
+    <label for="luogo">Luogo</label>
+    <input type="text" class="form-control" id="luogo" ng-model="appuntamento.luogo">
+  </div>
+  <div class="form-group">
+      <label for="priorita">Priorita</label>
+     <select class="form-control" ng-model="appuntamento.priorita">
+      <option value="alta" >Alto</option>
+      <option value="media" >Medio</option>
+      <option value="bassa" >Basso</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="immagine">Immagine</label>
+    <input type="text" class="form-control" id="immagine" ng-model="appuntamento.image">
+  </div>
+
+<button type="submit" class="btn btn-danger">Crea</button>
+</form>
+
+   
+
+
+</div>
