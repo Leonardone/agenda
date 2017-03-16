@@ -2,6 +2,7 @@ angular.module('app').service('AgendaSrv', function(){
 
     
     var appuntamenti=[{
+        id:1,
         titolo: 'appuntamento con angular',
         data: new Date(),
         descrizione:'Non mi presenterò',
@@ -9,6 +10,7 @@ angular.module('app').service('AgendaSrv', function(){
         priorita:'#ffa500',
         image:'https://dailybestecn.nohup.it/wp-content/uploads/2016/03/qXvUbj6.gif'
     },{
+        id:2,
         titolo: 'appuntamento con Eddie',
         data: new Date(),
         descrizione:'Fuscaldone',
@@ -18,6 +20,7 @@ angular.module('app').service('AgendaSrv', function(){
 
 
     },{
+        id:3,
        titolo: 'appuntamento da Ubaldo',
         data: new Date(),
         descrizione:'baldo',
@@ -25,6 +28,7 @@ angular.module('app').service('AgendaSrv', function(){
         priorita:'#00ff00',
         image:'http://vignette1.wikia.nocookie.net/simpsons/images/b/bb/Best-simpsons-gifs-homers-brain.gif/revision/latest?cb=20130920112513' 
     },{
+        id:4,
          titolo: 'appuntamunto da Edo',
         data: new Date(),
         descrizione:'pussavia',
@@ -32,6 +36,7 @@ angular.module('app').service('AgendaSrv', function(){
         priorita:'#00ff00',
         image:'https://media.giphy.com/media/fDO2Nk0ImzvvW/giphy.gif'
     },{
+        id:5,
         titolo: 'appuntamunto con Nietzche',
         data: new Date(),
         descrizione:'Suicidio',
@@ -45,9 +50,9 @@ angular.module('app').service('AgendaSrv', function(){
     var deleteAppuntamenti= function(index){
          appuntamenti.splice(index, 1);
     }
-    var getAppuntamento= function(titolo){
+    var getAppuntamento= function(id){
         return appuntamenti.find(function(el){
-            return el.titolo==titolo;
+            return el.id==id;
         })
     }
 
